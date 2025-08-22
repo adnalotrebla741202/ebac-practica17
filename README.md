@@ -5,7 +5,7 @@ Este proyecto es una práctica educativa desarrollada en <strong>HTML</strong> y
 Cada ejercicio está diseñado para practicar una habilidad específica en <b>JavaScript</b>, y todos los resultados se muestran en la consola del navegador.
 <h2>Tecnologías utilizadas</h2>
 <ul>
-  <li>Comprende el uso de funciones anónimas y su asignación a variables.
+  <li>Comprende el uso de funciones anónimas y su asignación a variables.</li>
   <li>Refuerza el manejo de estructuras como arreglos y objetos.</li>
   <li>Muestra el uso de métodos integrados de <b>JavaScript</b> (.toUpperCase(), .includes(), .filter(), Math.pow(), etc.).</li>
   <li>Muestra como validar entradas, manejar errores y crear mensajes personalizados.</li>
@@ -20,7 +20,7 @@ Cada ejercicio está diseñado para practicar una habilidad específica en <b>Ja
   <li>Descomprimir el archivo zipeado, entrar a la carpeta creada y buscar el archivo <b>index.html</b>.</li>
   <li>Una vez localizado el archivo <b>index.html</b> le damos doble click a dicho archivo y se nos abrirá el proyecto HTML en nuestro navegador de Internet predeterminado.</li>
   <li>Una vez abierto el archivo en el navegador, hay que darle click con el botón derecho en la pagina web y seleccionamos la opción inspeccionar.</li>
-  <li>Buscamos el icono con los 3 puntos en forma vertical el cual se encuentra a la derecha de un icono con forma de engrane; este icono es para seleccionar la manera en la que queremos ver la distribución de las ventanas. Se recomienda usar la opción que tiene el recuadro grande arriba y un rectángulo en la parte de abajo.
+  <li>Buscamos el icono con los 3 puntos en forma vertical el cual se encuentra a la derecha de un icono con forma de engrane; este icono es para seleccionar la manera en la que queremos ver la distribución de las ventanas. Se recomienda usar la opción que tiene el recuadro grande arriba y un rectángulo en la parte de abajo.</li>
   <li>En la barra de opciones buscamos el menú <b>Consola</b>.</li>
   <li>Se recomienda maximizar lo más posible el área de la consola para tener una mejor visualización de los resultados de los ejercicios.</li>
   <li>Podemos usar el scroll del ratón y/o la barra de desplazamiento vertical para poder ver cada uno de los diez ejercicios que conforman el proyecto.</li>
