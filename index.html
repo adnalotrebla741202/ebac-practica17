@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <style>
+        
+    </style>
+
+    <title>Práctica 17</title>
+
+</head>
+<body>
+
+    <script>
+        /* 
+            1. Multiplicador.
+               Crea una función llamada "multiplicar" que acepte dos parámetros numéricos y 
+               haga un return de el resultado. Llama a la función dentro de una variable e 
+               imprime el resultado en la consola.
+
+               Por ejemplo: multiply(2, 2) ----- Regresa 4
+        */
+
+        const multiply =
+            function (multiplicarFirstValue, multiplicarSeccondValue)
+            {
+                return multiplicarFirstValue * multiplicarSeccondValue;
+            }
+
+        console.log("1. Multiplicador");
+        console.log("\n");
+        console.log(multiply(2,2));
+        console.log(multiply(5,7));
+        console.log(multiply(5,4));
+        console.log(multiply(16,22));
+        console.log(multiply(10,30));
+        console.log("\n\n\n\n\n");
+
+
+
+
+
+        /*
+            2. Convertidor de grados Farenheit a Celcius -- Versión con funciones.
+               Crea una función que acepte un valor numérico que represente grados fahrenheit
+               y que regrese el número convertido a celsius. Este ejercicio lo realizamos en 
+               la tarea pasada solo que ahora lo haremos con funciones. Llama a la función 
+               dentro de una variable e imprime el resultado en la consola.
+
+               Por ejemplo: convertCelsius(2) ----- Regresa 37.7
+        */
+
+        const convertCelsius =
+            function (fahrenheitValue)
+            {
+                return ((fahrenheitValue - 32) * (5/9));
+            }
+
+        console.log('2. Convertidor de grados Farenheit a Celcius --> Versión con funciones.');
+        console.log("\n");
+        console.log(convertCelsius(77));
+        console.log(convertCelsius(-32.8));
+        console.log(convertCelsius(113));
+        console.log(convertCelsius(-10.3));
+        console.log(convertCelsius(99.86));
+        console.log("\n\n\n\n\n");
+
+
+
+
+
+        /*
+            3. Sumar numeros de un array.
+               Crea una función que acepte un parámetros que sea un array de números y que haga
+               un return de la suma de esos números. Llama a la función dentro de una variable
+               e imprime el resultado en la consola.
+
+               Por ejemplo: sumArrays([1,2,3]) ----- Regresa 6
+        */
+
+        const  sumArrays =
+            function (arrayToAddNumbers)
+            {
+                let sumOfArrayElements = 0;
+                for(let arrayElement of arrayToAddNumbers)
+                {
+                    sumOfArrayElements += arrayElement;
+                }
+                return sumOfArrayElements;
+            }
+
+        console.log('3. Sumar numeros de un array.');
+        console.log("\n");
+        console.log(sumArrays([1,2,3]));
+        console.log(sumArrays([4,5,6]));
+        console.log(sumArrays([7,8,9]));
+        console.log(sumArrays([6,7,8,9,10]));
+        console.log(sumArrays([1,2,3,4,5]));
+        console.log("\n\n\n\n\n");
+
+
+
+
+
+        /*
+            4. Calculadora.
+               Crea una función que acepte tres parámetros, dos numéricos y otro un simbolo de
+               operación matemática, puede aceptar suma, resta, división y multiplicación. 
+               Dependiendo de el simbolo que se le pase a la función, es la operación que 
+               realizará la función. Llama a la función dentro de una variable e imprime el
+               resultado en la consola.
+
+               PUNTOS EXTRA: Si alguno de los parámetros numéricos no son numéricos, regresar 
+               un mensaje de error. Si el tercer parámetro no es uno de los símbolos permitidos
+               regresar un mensaje de error.
+
+               PISTA: Usar condicionales dentro de la función.
+
+               Por ejemplo: calculator(1,1,"+") ----- Regresa 2
+        */
+
+        const  calculator =
+            function (calculatorFirstValue, calculatorSecondValue, calculatorOperator)
+            {
+                if (isNaN(calculatorFirstValue) || isNaN(calculatorSecondValue)) 
+                {
+                    if(calculatorOperator != "+" && calculatorOperator != "-" && calculatorOperator != "*" && calculatorOperator != "/")
+                    {
+                        return "Error: El valor introducido no es un número y el operador introducido no está permitido."
+                    }
+                    else
+                    {
+                        return "Error: El valor introducido no es un número.";
+                    }
+                }
+                else if(calculatorOperator != "+" && calculatorOperator != "-" && calculatorOperator != "*" && calculatorOperator != "/")
+                {
+                    return "Error: El operador introducido no está permitido.";
+                }
+                else
+                {
+                    switch(calculatorOperator)
+                    {
+                        case "+":
+                            return parseFloat(calculatorFirstValue) + parseFloat(calculatorFirstValue);
+                            break;
+                        case "-":
+                            return parseFloat(calculatorFirstValue) - parseFloat(calculatorSecondValue);
+                            break;
+                        case "*":
+                            return parseFloat(calculatorFirstValue) * parseFloat(calculatorSecondValue);
+                            break;
+                        case "/":
+                            return parseFloat(calculatorFirstValue) / parseFloat(calculatorSecondValue);
+                            break;
+                    }
+                }
+            }
+
+        console.log('4. Calculadora.');
+        console.log("\n");
+        console.log(calculator(1,1,"+"));
+        console.log(calculator(1,"b","+"));
+        console.log(calculator(5,1,"-"));
+        console.log(calculator("a",2,"-"));
+        console.log(calculator(10,2,"*"));
+        console.log(calculator(1,5,"2"));
+        console.log(calculator(10,2,"/"));
+        console.log(calculator("a","b","a"));
+        console.log(calculator("1.8","2.6","+"));
+        console.log(calculator(1,2,"."));
+        console.log(calculator("3.5","7.8","*"));
+        console.log(calculator("3.5","7.8","8"));
+        console.log("\n\n\n\n\n");
+
+
+
+
+
+        /*
+            5. Identificador de perros.
+               Crea una función que identifique para un hospital veterinario especializado en
+               perros. La función debe de aceptar 1 argumento, un objeto con un key que 
+               contenga el nombre de la mascota y otro que tenga su especie. Si la especie es 
+               un perro regresar el siguiente mensaje incluyendo el nombre de la 
+               mascota: Nombre de la mascota puede pasar a consulta.
+
+               Si la especie no es un perro regresar un mensaje que indique que la mascota no
+               es un perro. Llama a la función dentro de una variable e imprime el resultado
+               en la consola.
+
+               Por ejemplo: dogIdentifier({name: "Shiva", species: "Perro"})
+               Regresa "Shiva puede pasar a consulta."
+        */
+
+        const  dogIdentifier =
+            function dogIdentifier(petInformation) 
+            {
+                if (petInformation.species.toLowerCase() === 'perro') 
+                {
+                    return `${petInformation.name} puede pasar a consulta.`;
+                } 
+                else 
+                {
+                    return `${petInformation.name} no es un perro.`;
+                }
+            }
+
+        console.log('5. Identificador de perros.');
+        console.log("\n");
+        console.log(dogIdentifier({name: "Shiva", species: "Perro"}));
+        console.log(dogIdentifier({name: 'Miau', species: 'Gato' }));
+        console.log("\n\n\n\n\n");
+
+
+
+
+
+        /* 
+            6. Capitalizador de palabras.
+               Crea una función que capitalize una palabra, es decir, convierte la primera letra
+               de minúscula a mayúscula. Llama a la función dentro de una variable e imprime el 
+               resultado en la consola. 
+
+               Por ejemplo: capitalize("hello!") ----- Regresa "Hello!"
+        */
+
+        const capitalize = 
+            function (wordToCapitalize)
+            {
+                return wordToCapitalize.charAt(0).toUpperCase() + wordToCapitalize.slice(1);
+            }
+
+        console.log('6. Capitalizador de palabras.');
+        console.log("\n");
+        console.log(capitalize("hello!"));
+        console.log(capitalize("saludos"));
+        console.log(capitalize("méxico"));
+        console.log(capitalize("alberto"));
+        console.log(capitalize("mar"));
+        console.log("\n\n\n\n\n");
+
+
+
+
+
+        /*        
+            7. Arrays con loops.
+               El objetivo es arreglar el array que debería de contener solo días de la
+               semana, quita los elementos que no correspondan y agrega los 
+               faltantes. Después con la ayuda de un loop imprime los valores uno por uno
+               en la consola.
+
+               const days = ["Junio", "Martes", "Miercoles", "Jueves", "Luna"];
+        */
+
+        const fixWeekDays = function (daysValues) 
+        {
+            const weekDays = ['domingo', 'lunes', 'martes', 'miércoles', 'jueves', 'viernes', 'sábado'];
+            const validDays = daysValues.filter(daysValues => weekDays.includes(daysValues));
+            const weekDaysSet = new Set(validDays);
+            let fixWeekDaysResult = "";
+            fixWeekDaysResult += `\nEl arreglo original es: ${daysValues}\n\n`;
+
+            weekDays.forEach(daysValues => 
+            {
+                if (!weekDaysSet.has(daysValues)) 
+                {
+                    weekDaysSet.add(daysValues);
+                }
+            });
+
+            const daysWeekResult = 
+            Array.from(weekDaysSet).sort((a, b) => weekDays.indexOf(a) - weekDays.indexOf(b));
+    
+            fixWeekDaysResult += `Los días de la semana son:\n`;
+            daysWeekResult.forEach(daysValues => 
+            {
+                fixWeekDaysResult += `${daysValues}\n`;
+            });
+
+            fixWeekDaysResult += `\nEl arreglo final es: ${daysWeekResult}\n\n`;
+            return fixWeekDaysResult;
+        }
+
+        const days = ["Junio", "Martes", "Miercoles", "Jueves", "Luna"];
+        console.log('7. Arrays con loops.');
+        console.log("\n");
+        console.log(fixWeekDays(days));
+        console.log(fixWeekDays(["lunes", "martes", "falso", "jueves", "domingo", "extraño", "sábado"]));
+        console.log(fixWeekDays(['lunes', 'sábado', 'fuego', 'martes', 'miércoles', 'jueves', 'domingo', 'domingo', "lunes", "Lunes"]));
+        console.log(fixWeekDays(['lunes', 'Lunes', 'martes', 'martes', 'miércoles', 'miércoles', 'sábado', 'viernes']));
+        console.log("\n\n\n\n\n");
+
+
+
+
+
+        /*
+            8. Objects.
+               Crea una función que acepte 3 argumentos un object y dos strings. La función deberá 
+               de agregar un key con su valor indicados en los dos argumentos, el primer argumento 
+               será el nombre del key y el segundo su valor. Llama a la función dentro de una 
+               variable e imprime el resultado en la consola.
+
+               Por ejemplo: 
+               addPropertie({song: "The Scientist"}, "artist", "Coldplay")
+               Regresa {song: "The Scientist", artist: "Coldplay"}
+        */
+
+        const addPropertie = function (objValue, keyValue, value) 
+        {
+            objValue[keyValue] = value; 
+            return objValue; 
+        }
+
+        console.log('8. Objects.');
+        console.log("\n");
+        console.log(addPropertie({song: "The Scientist"}, "artist", "Coldplay")); 
+        console.log(addPropertie({}, "name", "Juan")); 
+        console.log(addPropertie({athlete: 'Michael Jordan'}, "sport", "Basketball")); 
+        console.log("\n\n\n\n\n");
+
+
+
+
+
+        /*
+            9. Objects.
+            Crea una función que acepte dos argumentos, un objeto y un string. La función debe de 
+            imprimir en consola ya sea los keys del objetos o sus values dependiendo de lo que se le 
+            indique en el segundo argumento, no importa por cuantas palabras se componga el string, si 
+            contiene la palabra valor o valores debe mostrar los values. si contiene la palabra key, 
+            keys debe de mostrar sus keys, si no contiene ninguna mostrar un mensaje de error. El 
+            objeto tiene que contener por lo menos 4 keys con sus values. Llama a la función dentro de 
+            una variable e imprime el resultado en la consola.
+
+            Por ejemplo: showObject({movie: "Star Wars"}, "Muestrame todos los valores, porfa!")
+            Regresa "Star Wars"
+        */
+
+        const showObject = function (objetToShow, showInstruction) 
+        {
+            if (showInstruction.includes('valor') || showInstruction.includes('valores')) 
+            {
+                return Object.values(objetToShow);
+            }
+            else if (showInstruction.includes('key') || showInstruction.includes('keys')) 
+            {
+                return Object.keys(objetToShow);
+            } 
+            else 
+            {
+                return 'Error: La instrucción no contiene "key" o "valor".';
+            }
+        }
+
+        console.log('9. Objects.');
+        console.log("\n");
+        console.log(showObject({ movie: "Star Wars" }, "Muestrame todos los valores, porfa!"));
+        console.log(showObject({ name: 'Juan', age: 30, city: 'Madrid', occupation: 'Desarrollador' }, "Quiero ver los keys"));
+        console.log(showObject({ make: "Ford", model: "Mustang", year: 1969 }, "Muestrame la información"));
+        console.log(showObject({ color: "red", wheels: 4, engine: { cylinders: 4, size: 2.2 } }, "¿Algún valor por mostrar?"));
+        console.log(showObject({ name: "Rand McKinnon", age: 33, sex: "M" }, "Quiero ver el contenido del objeto"));
+        console.log(showObject({ playerName: "Manz", playerLifes: 99, playerPowers: 10 }, "¿Existe algún key en tu base de datos?"));
+        console.log("\n\n\n\n\n");
+
+
+
+
+
+        /*
+            10. Ejercicio libre.
+                Crea una función que realice alguna lógica de tu elección, tiene que contener
+                por lo menos 2 métodos de los vistos en clase de strings, numbers, objects o 
+                arrays y también algún condicional.
+
+                PUNTOS EXTRAS: Usar más de 2 metodos. Usar loops
+        */
+
+        /*  
+            Esta función recibe 3 parámetros los cuales son un número, una cadena y un arreglo
+            de números.
+            Con el número se emplea un método de número para calcular el cuadrado del mismo y
+            determina si el cuadrado es par.
+            Con la cadena se emplea un método de cadena para cambiar el contenido de la cadena
+            de minúsculas a mayúsculas.
+            Con el arreglo se emplea un método de arreglo para hacer uno nuevo que contenga el 
+            cuadrado de cada uno de los elementos del original.
+        */
+
+        const freeExercise = function (squareNumeric, capitalLettersString, squareArrayElements)
+        {
+            let freeExerciseResult = "";
+            let squareNumericResult = 0;
+
+            // Método Numérico: Calcula el cuadrado del número.
+            squareNumericResult = Math.pow(squareNumeric, 2);
+            freeExerciseResult += `Square Number = ${squareNumericResult}\n`;
+
+            // Método de Cadena: Convierte el texto de la cadena a mayúsculas.
+            freeExerciseResult += `Capital Letters String = ${capitalLettersString.toUpperCase()}\n`;
+
+            // Condicional: Checa si el cuadrado del número es par.
+            if (squareNumeric % 2 === 0) 
+            {
+                freeExerciseResult += `Even Square Number = ${true}\n`;
+            } 
+            else 
+            {
+                freeExerciseResult += `Even Square Number = ${false}\n`;
+            }
+
+            /* Bucle: Itera en cada uno de los elementos del arreglo para calcular sus valores 
+               cuadráticos. */
+            let squares = [];
+            // Usamos un bucle para recorrer el arreglo de números.
+            for (let squareArrayElement of squareArrayElements) 
+            {
+                // Calculamos el cuadrado del número actual y lo añadimos al arreglo de cuadrados.
+                squares.push(Math.pow(squareArrayElement,2));
+
+            }
+            freeExerciseResult += `Square Array Elements = ${squares}\n\n`;
+
+            return freeExerciseResult; 
+        }
+
+        console.log('10. Ejercicio libre.');
+        console.log("\n");
+        console.log(freeExercise(4, "hello", [1, 2, 3, 4, 5]));
+        console.log(freeExercise(5, "Pablo", [6, 7, 8, 9]));
+        console.log(freeExercise(9, "EsTeLa", [10, 11, 12, 13, 14, 15]));
+
+    </script>
+
+</body>
+</html>
