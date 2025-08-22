@@ -19,7 +19,7 @@ Cada ejercicio está diseñado para practicar una habilidad específica en <b>Ja
   <li>Para usar este código hay que ir a la pestaña Code | Download ZIP.</li>
   <li>Descomprimir el archivo zipeado, entrar a la carpeta creada y buscar el archivo <b>index.html</b>.</li>
   <li>Una vez localizado el archivo <b>index.html</b> le damos doble click a dicho archivo y se nos abrirá el proyecto HTML en nuestro navegador de Internet predeterminado.</li>
-  <li>Una vez abierto el archivo en el navegador, hay que darle click con el botón derecho en la pagina web y seleccionamos la opción inspeccionar.</li>
+  <li>Una vez abierto el archivo en el navegador, hay que darle click con el botón derecho en la página web y seleccionamos la opción inspeccionar.</li>
   <li>Buscamos el icono con los 3 puntos en forma vertical el cual se encuentra a la derecha de un icono con forma de engrane; este icono es para seleccionar la manera en la que queremos ver la distribución de las ventanas. Se recomienda usar la opción que tiene el recuadro grande arriba y un rectángulo en la parte de abajo.</li>
   <li>En la barra de opciones buscamos el menú <b>Consola</b>.</li>
   <li>Se recomienda maximizar lo más posible el área de la consola para tener una mejor visualización de los resultados de los ejercicios.</li>
